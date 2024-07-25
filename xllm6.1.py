@@ -181,6 +181,10 @@ def cluster_embeddings(embeddings, n_clusters=5):
     words = list(embeddings.keys())
     vectors = [list(embeddings[word].values()) for word in words]
 
+    if len(vectors) < n_clusters:
+        print(f"Not enough data points to form {n_clusters} clusters. Only {len(vectors)} data points available.")
+        return
+
     # Find the maximum length of embeddings
     max_length = max(len(vector) for vector in vectors)
     vectors = [vector + [0] * (max_length - len(vector)) for vector in vectors]
