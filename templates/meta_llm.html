@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meta LLM Interface</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">Meta LLM Interface</h1>
+        <form id="queryForm">
+            <div class="form-group">
+                <label for="prompt">Enter your prompt:</label>
+                <input type="text" id="prompt" class="form-control" placeholder="Type your prompt here...">
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </form>
+        <div id="responses"></div>
+    </div>
+    <script src="{{ url_for('static', filename='js/meta_llm_scripts.js') }}"></script>
+</body>
+</html>

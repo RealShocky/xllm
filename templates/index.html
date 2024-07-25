@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LLM Interface</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            text-align: center;
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+        h1 {
+            margin-bottom: 20px;
+            color: #555;
+        }
+        .tiles {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .tile {
+            background-color: #007bff;
+            color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            width: 200px;
+            text-align: center;
+            transition: background-color 0.3s;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .tile:hover {
+            background-color: #0056b3;
+        }
+        .tile a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            display: block;
+            height: 100%;
+            width: 100%;
+        }
+        .description {
+            font-size: 14px;
+            margin-top: 10px;
+            color: #e0e0e0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>LLM Interface</h1>
+        <div class="tiles">
+            <a href="/meta_llm" class="tile">
+                <div>
+                    MetaFusion LLM
+                    <p class="description">Access the Meta LLM interface for querying multiple LLMs and blending their responses for enhanced insights.</p>
+                </div>
+            </a>
+            <a href="/xllm6" class="tile">
+                <div>
+                    xLLM 6.1
+                    <p class="description">Explore the advanced features of XLLM 6.1 including semantic search, clustering, and visualization.</p>
+                </div>
+            </a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XLLM 6.1 Interface</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">XLLM 6.1 Interface</h1>
+        <form id="xllm6Form">
+            <div class="form-group">
+                <label for="queryInput">Enter your query:</label>
+                <input type="text" id="queryInput" class="form-control" placeholder="Enter queries (e.g., Gaussian distribution, central moments)">
+                <button type="submit" class="btn btn-primary">Search</button>
+            </div>
+        </form>
+        <div id="results"></div>
+    </div>
+    <script src="{{ url_for('static', filename='js/xllm6_scripts.js') }}"></script>
+</body>
+</html>
